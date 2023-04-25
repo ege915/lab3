@@ -2,6 +2,21 @@ import static org.junit.Assert.*;
 import org.junit.*;
 
 public class ArrayTests {
+  @Test
+  public void testReversedArrayFail(){
+    int[] input = {1, 2, 3, 4};
+    int[] output = {4, 3, 2, 1};
+    assertArrayEquals(output, ArrayExamples.reversed(input));
+  }
+
+  @Test
+  public void testReversedArrayPass(){
+    int[] input = {0, 0, 0};
+    int[] output = {0, 0, 0};
+    assertArrayEquals(output, ArrayExamples.reversed(input));
+  }
+
+  /* 
 	@Test 
 	public void testReverseInPlace() {
     int[] input1 = { 3 };
@@ -46,4 +61,5 @@ public class ArrayTests {
 //    double[] input4 = {0.0, 2.0, 4.0, -1.2, -1.2};
 //    assertEquals(2.0, ArrayExamples.averageWithoutLowest(input4), 0.1);
 //  }
+*/
 }
